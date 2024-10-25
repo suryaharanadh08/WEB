@@ -1,0 +1,13 @@
+1. JavaScript Program To Print Hello World 
+2. JavaScript Program to Add Two Numbers 
+3.JavaScript Program to Check if a number is Positive, Negative, or Zero 
+4.JavaScript Program to Check if a Number is Odd or Even
+5. JavaScript Program to Find the Largest Among Three Numbers 
+6. JavaScript Program to Check Prime Number
+7 JavaScript Programto Print All Prime Numbers in an Interval 
+8. JavaScript Program to Find the Factorial of a Number 
+9. JavaScript Program to Display the Multiplication Table 
+10. JavaScript Program to Check Armstrong Number 
+11. JavaScript Program to Find the Sum of Natural Numbers 
+12. JavaScript Program to Check Whether a String is Palindrome or Not   
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Check Interger -/0/+</title>
+    </head>
+    <style>
+         form{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+         }
+    </style>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>Enter a Number : <input style="margin-left: 40px;" type="number" id="num"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="button" onclick="check()" value="check" style=" margin-top: 20px; margin-bottom: 25px;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><div  id="ans"> </div></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function check(){
+                let num = parseFloat(document.getElementById("num").value);
+                if(num<0){
+                    document.getElementById("ans").innerHTML=" NEGATIVE Number";
+                }else if(num==0){
+                     document.getElementById("ans").innerHTML="Zero";
+                }else{
+                     document.getElementById("ans").innerHTML="POSITIVE Number";
+                }
+            }
+        </script>
+    </body>
+</html>

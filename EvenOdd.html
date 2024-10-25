@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Even or Odd</title>
+       <style>
+         form{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+         }
+       </style>
+    </head>
+    <body>
+        <form >
+            <table>
+                <tr>
+                    <td colspan="2">Enter a Number: <input type="number" id="num" value=""></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="button" onclick="check()" value="check" style=" margin-top: 20px; margin-bottom: 25px;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><div  id="ans"> </div></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function check(){
+                let num= document.getElementById("num").value;
+                if(num%2==0){
+                    document.getElementById("ans").innerHTML="It is Even";
+                }
+                else{
+                    document.getElementById("ans").innerHTML="It is Odd";
+                }
+            }
+        </script>
+    </body>
+</html>

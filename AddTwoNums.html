@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Two Nums</title>
+        <style>
+            input{
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+            form{
+                display: flex;
+                justify-content: center;
+                margin-top: 100px;
+            }
+        </style>
+       
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td colspan="2">Enter Num in A : <input type="number" id="a" value="0"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Enter Num in B : <input type="number" id="b" value="0"></td>
+                </tr>
+                <tr>
+                    <td  colspan="2">
+                        <input type="button" value="Add" onclick="add()">
+                        <input type="number" id="c" style="margin-left: 70px;"> 
+                    </td>
+                </tr>
+             
+            </table>
+        </form>
+        <script>
+            function add(){
+                let a = parseFloat(document.getElementById("a").value);
+                let b = parseFloat(document.getElementById("b").value);
+                let sum=a+b;
+                document.getElementById("c").value=sum;
+            }
+        </script>
+    </body>
+</html>
+<!-- set default to 0, but should not be shown inside text box -->

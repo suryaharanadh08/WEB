@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            calculator
+        </title>
+        <style>
+            h1{
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            /* div{
+                text-align: center;
+                align-content: center;
+                padding: 30px;
+                background-color: rgb(239, 239, 253);
+                width: 200px;
+                
+            } */
+             td{
+                padding: 20px;
+                align-items: center;
+             }
+             form{
+                text-align: center;
+             }
+        </style>
+        <script>
+            function calculate(operation){
+                a=parseFloat(document.getElementById("a").value);
+                b=parseFloat(document.getElementById("b").value)
+                let result;
+                switch(operation){
+                    case 'Add':
+                        result=a+b;
+                        break;
+                    case'Substract':
+                        result=a-b;
+                        break;
+                    case 'Divide':
+                        result=a/b;
+                        break;
+                    case 'Multiply':
+                        result=a*b;
+                        break;
+                }
+                console.log(result);
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Calculator Application</h1>
+        <div class="div">
+            <form>
+                <pre>
+                    Enter value in A :
+                    <input type="number" id="a" name="a" >
+                    Enter value in B :
+                    <input type="number" id="b" name="b" >
+                    <table >
+                        <tr>
+                            <td><input type="button" onclick="calculate(value)" name="add" value="Add"></td>
+                            <td><input type="button" onclick="calculate(value)" name="Substract" value="Substract"></td>
+                            <td><input type="button" onclick="calculate(value)" name="Multiply" value="Multiply"></td>
+                            <td><input type="button" onclick="calculate(value)" name="Divide" value="Divide"></td>
+                        </tr>
+                    </table>
+                </pre>
+            </form>
+        </div>
+    </body>
+</html>
