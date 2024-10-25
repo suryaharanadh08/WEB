@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+</head>
+<body style="text-align: center; display: block; background-color:aqua; background-image: url(bodybg.jpeg); background-repeat: no-repeat; background-size: cover;" >
+<Center>
+    <pre>
+    <h1 style="color: blue; margin-bottom: 0;">Student Registration Form</h1>
+    <h3 style="margin-bottom:0;">Please Enter Your Details Carefully</h3>
+<div>
+    <form style="text-align: center; width:380px ;box-shadow: 0px 2px 10px; border-radius: 10px;  border: 1px solid; border-color: rgb(157, 31, 31);margin:auto; max-width:fit-content; padding: 40px;background-color:aliceblue; font-size: 14px; font-family: 'Times New Roman', Times, serif;font-weight: 500;" id="srf" name="StudentRegistrationform" method="get" action="success.html" onclick="">
+       <label for="FirstName">First Name:</label>  <input style="width:100px;" type="text" id="FirstName" name="FirstName" required>    <label for="Lastname">Last Name:</label>   <input style="width:100px;" type="text" id="Lastname" name="Lastname" required>
+        
+    <label for="dob">Date of Birth:</label>  <input type="date" id="dob" name="dob" required>
+
+                      <label for="FatherName">Father's Name:</label>  <input type="text" id="FatherName" name="FatherName" placeholder="Full name" required>
+
+                       <label for="MotherName">Mother's Name:</label>  <input type="text" id="MotherName" name="MotherName" placeholder="Full name" required>
+
+                    <label for="branch">Engineering Branch:</label>  <select style="width:150px;" id="branch" name="branch" required>    <option value="" disabled selected>Select your branch</option>
+                        <option value="CSE">Computer Science Engineering</option>
+                        <option value="ECE">Electronics and Communication Engineering</option>
+                        <option value="ME">Mechanical Engineering</option>
+                        <option value="CE">Civil Engineering</option>
+                        </select>
+
+
+  <label for="cs">Rate your comm skills (1-10):</label>
+        <input style="margin-bottom:0px; margin-right: 40px;" type="range" id="cs" name="cs" min="1" max="10">
+        <div class="radio-group" style="justify-content: center;align-items: center;flex-direction: column;display:flexbox;">
+            <label >Choose Your Gender:</label>   <input  style="margin-right: 17px;" type="radio" name="Gender" id="male" value="Male" required>Male      <input   type="radio" name="Gender" id="female" value="Female"> Female
+          </div>
+Langauges known :
+       <div style="display:inline-block;">   
+ <input type="checkbox" id="Telugu" name="Telugu" value="Telugu"> Telugu    <input type="checkbox" id="Hindi" name="Hindi" value="Hindi"> Hindi   <input type="checkbox" id="English" name="English" value="English"> English
+              
+    </div>
+        <label for="PhoneNumber">Phone Number:</label>  <input style="width:100px;" type="tel" id="PhoneNumber" name="PhoneNumber" required>
+
+                <label for="email">Email:</label>  <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+        <label for="Hobbies">Describe Your Hobbies:</label>
+        <textarea id="Hobbies" name="Hobbies" rows="4" required></textarea>
+        
+        <label for="favcol">Favourite Color:</label>   <input type="color" id="favcol" name="favcol" required>
+
+        <label for="psd">Enter password     :</label>   <input style="width: 100px;" type="password" id="psd" name="psd" required>
+
+        <label for="cpsd">Confirm password :</label>  <input style="width: 100px;" type="password" id="psd" name="cpsd" required>
+
+                     <label for="file">Upload your pic:</label>    <input type="file" id="file" accept=".jpg, .png, .pdf">
+        
+        <input style="max-width: fit-content; " type="reset" id="reset" value="Clear Form"><br>
+        <button  type="submit">Register</button>
+        
+    </form>        
+</div>
+</pre>
+</Center>
+</body>
+</html>

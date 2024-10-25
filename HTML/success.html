@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;color: darkblue;">Registered Successfully</h1>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const firstName = urlParams.get('FirstName');
+            const lastName = urlParams.get('Lastname');
+            if(firstName=="Ramachandra"){
+                console.log("welcome");
+            }
+        </script>
+    </body>
+</html>

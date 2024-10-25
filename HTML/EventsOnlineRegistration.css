@@ -1,0 +1,44 @@
+/* https://www.jotform.com/form-templates/online-registration */
+h1{
+    text-align: center;
+    color: rgb(2, 28, 29);
+}
+form{
+    border: 30px;
+   justify-content: center;
+   font-family: sans-serif;
+}
+table{
+    text-align: left;
+    padding:35px 20px 10px;
+    
+}
+td,tr{
+    padding: px;
+  
+}
+
+div{
+    background-color: rgb(218, 200, 236);
+    width: 400px;
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    border-width: 20%;
+    
+}
+body{
+    background-color: #d5e4f0;
+}
+input{
+   
+    transition: 1ms;
+    height: 20px;
+    margin-bottom: 15px;
+}
+select{
+    margin-bottom: 15px;
+}
+dandt{
+    background-color: rgb(9, 44, 75);
+    border-width: 20%;
+}

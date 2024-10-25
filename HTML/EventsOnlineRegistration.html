@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Events Online Registration
+        </title>
+        <link rel="stylesheet" href="EventsOnlineRegistration.css">
+    </head>
+    <body>
+        <h1 >Events Online Registration Form</h1>
+        <form id="f1" method="post" action="demo.html" autocomplete="off" enctype="text/plain" >
+            <center>
+            
+            <div class="div">
+            <table class="table">
+                <tr>
+                    <td>Event Name</td>
+                </tr>
+                <tr>
+                    <td><input type="text" width="25" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><t style="margin-right: 90px;">FirstName</t>LastName</td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2"><input style="width: 120px;" type="text" placeholder="FirstName" required>
+                   <input style="width: 100px; margin-left: 30px;" type="text" required placeholder="LastName">
+                </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="Gender" name="Gender" value="Male" > male 
+                        <input style="margin-left: 20px;" type="radio" id="Gender" name="Gender" value="Female"> Female
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>Birth Date</td>
+                </tr>
+                <tr>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input style="width: 60px;" type="number" required></td>
+                </tr>
+                <tr>
+                    <td >Street Address</td>
+                </tr>  
+                <tr>
+                    <td><textarea rows="3" cols="20" placeholder=" your Address Here"></textarea></td>
+                   
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td align="center">State/province</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select required>    
+                            <option aria-readonly="true">Select your City</option>
+                            <option>Visakhapatnam</option>
+                            <option>Mumbai</option>
+                            <option>Kolkata</option>
+                            <option>Pune</option>
+                        </select>
+                        </td>
+                    <td align="center">
+                    <select required>
+                        <option aria-readonly="true">Select your State/Province</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Maharastra</option>
+                        <option>Delhi</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td align="center">Contact Number</td>
+                </tr>
+                <tr>
+                    <td><input type="email" placeholder="example@gmail.com" required></td>
+                    <td align="center"><input style="width: 80px;" type="tel" required></td>
+                </tr>
+                <tr>
+                    <td>Shirt Size</td>
+                </tr>
+                <tr>
+                    <td><input style="width: 50px;" type="number" max="50" min="10"></td>
+                </tr>
+                <tr>
+                    <td>Date and Time of deposit</td>
+                </tr>
+                <div class="dandt"></div>
+                <tr>
+                    <td colspan="3"><input type="date"><input required style="margin-left: 30px; margin-right: 30px; margin-bottom: 20px;" type="time"><select> <option>AM</option> <option>PM</option></select></td>      
+                   
+                    <tr>
+                    <td colspan="2" align="center">upload Scanned copy of deposit Slip</td>                   
+                </div>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input style="margin-top: 10px;" type="file" accept="pdf" ></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2"><input style="background-color: rgb(238, 229, 240);" type="submit"></td>
+                </tr>
+                        
+            </table>
+        </div>
+        </center>
+        </form>
+    </body>
+</html>
