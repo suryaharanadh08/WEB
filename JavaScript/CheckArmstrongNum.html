@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Check Armstrong Number</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        form{
+            justify-content: center;
+            display: flex;
+            margin-top: 50px;
+
+        }
+        input{
+            width: 50px;
+            margin-bottom: 15px;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Check Armstrong Number</h1>
+        <form action="f1">
+            <table>
+                <tr>
+                    <td colspan="2">Enter a Number:<input type="number" id="num" style="margin-left: 30px;"> </td>
+                </tr>
+                 <tr>
+                    <td colspan="2" align="center" ><input type="button" onclick="checkArmstrong()" value="check" style="width: fit-content;"></td>
+                </tr>
+                <tr><td colspan="2" align="center" id="ans"></td></tr>
+            </table>
+        </form>
+        <script>
+           function checkArmstrong(){
+            let num = parseFloat(document.getElementById("num").value);
+            let num1 = num;
+            let rem;
+            let sum=0;
+            while(num>0){
+                rem=num%10;
+                sum=sum+(rem*rem*rem);
+                num=parseInt((num/10));
+            }    
+            if(num1==sum)
+                 document.getElementById("ans").innerHTML="It is an Armstrong Number";
+            else
+                document.getElementById("ans").innerHTML="Not an Armstrong Number";
+
+        }
+        </script>
+    </body>
+</html>

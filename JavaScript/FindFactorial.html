@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find Factorial</title>
+    <style>
+        form{
+            justify-content: center;
+            display: flex;
+            margin-top: 50px;
+
+        }
+        input{
+            width: 50px;
+            margin-bottom: 15px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Find Factorial of a Number</h1>
+        <form action="f1">
+            <table>
+                <tr>
+                    <td>Enter a Number: <input type="number" id="num" style="margin-left: 20px;" ></td>
+                </tr>
+                 <tr>
+                    <td ><input type="button" onclick="findFactorial()" value="Find Factorial" style="width: fit-content;"><input type="input" id="ans" style="margin-left: 35px;"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+        </form>
+        <script>
+           function findFactorial(){
+            let num = parseFloat(document.getElementById("num").value);
+            let ans=1;
+            for(let i=num;i>=1;i--){
+                ans=ans*i;
+            }
+            document.getElementById("ans").value=ans;
+        }
+        </script>
+    </body>
+</html>

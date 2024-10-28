@@ -7,14 +7,24 @@
          form{
             display: flex;
             justify-content: center;
-            margin-top: 100px;
+            margin-top: 50px;
+         }
+         h1{
+            text-align: center;
+         }
+         div{
+            font-size: larger;
+         }
+         input{
+            width: 70px;
          }
     </style>
     <body>
+        <h1>Check a Number Positive/Negative/Zero</h1>
         <form>
             <table>
                 <tr>
-                    <td>Enter a Number : <input style="margin-left: 40px;" type="number" id="num"></td>
+                    <td>Enter a Number : <input style="margin-left: 20px;" type="number" id="num"></td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input type="button" onclick="check()" value="check" style=" margin-top: 20px; margin-bottom: 25px;"></td>

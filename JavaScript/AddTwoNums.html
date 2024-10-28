@@ -6,28 +6,33 @@
             input{
                 margin-left: 20px;
                 margin-bottom: 20px;
+                width: 50px;
             }
             form{
                 display: flex;
                 justify-content: center;
-                margin-top: 100px;
+                margin-top: 50px;
+            }
+            h1{
+                text-align: center;
             }
         </style>
        
     </head>
     <body>
+        <h1>Enter Two numbers to Add</h1>
         <form>
             <table>
                 <tr>
-                    <td colspan="2">Enter Num in A : <input type="number" id="a" value="0"></td>
+                    <td colspan="2">Enter Num in A : <input type="number" id="a" width="50px " ></td>
                 </tr>
                 <tr>
-                    <td colspan="2">Enter Num in B : <input type="number" id="b" value="0"></td>
+                    <td colspan="2">Enter Num in B : <input type="number" id="b"></td>
                 </tr>
                 <tr>
                     <td  colspan="2">
                         <input type="button" value="Add" onclick="add()">
-                        <input type="number" id="c" style="margin-left: 70px;"> 
+                        <input type="number" id="c" style="margin-left: 60px;"> 
                     </td>
                 </tr>
              
@@ -35,12 +40,11 @@
         </form>
         <script>
             function add(){
-                let a = parseFloat(document.getElementById("a").value);
-                let b = parseFloat(document.getElementById("b").value);
+                let a = parseFloat(document.getElementById("a").value) || 0;
+                let b = parseFloat(document.getElementById("b").value) || 0;
                 let sum=a+b;
                 document.getElementById("c").value=sum;
             }
         </script>
     </body>
 </html>
-<!-- set default to 0, but should not be shown inside text box -->

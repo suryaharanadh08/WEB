@@ -4,7 +4,7 @@
 4.JavaScript Program to Check if a Number is Odd or Even
 5. JavaScript Program to Find the Largest Among Three Numbers 
 6. JavaScript Program to Check Prime Number
-7 JavaScript Programto Print All Prime Numbers in an Interval 
+7 JavaScript Program to Print All Prime Numbers in an Interval 
 8. JavaScript Program to Find the Factorial of a Number 
 9. JavaScript Program to Display the Multiplication Table 
 10. JavaScript Program to Check Armstrong Number 

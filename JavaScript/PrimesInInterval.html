@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime Nums from A to B</title>
+        <style>
+           input{
+            margin-bottom: 15px;
+            width: 50px;
+           }
+            form{
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                font-size: 25px;
+                color: chocolate;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+       
+    </head>
+    <body>
+        <h1>Find Primes in an Interval</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Enter Num(Start) : <input type="number" id="a"  style="margin-left: 20px;"></td>
+                </tr>
+                <tr>
+                    <td>Enter Num(End) :<input type="number" id="b"   style="margin-left: 30px;" > </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="button" value="find" onclick="find()">  </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><e id="x" style="font-size: large;"></e> </td>
+                </tr>
+            </table>
+        </form>
+        <div id="ans" ></div>
+        <script>
+            function find(){
+                let a = parseFloat(document.getElementById("a").value) || 0;
+                let b = parseFloat(document.getElementById("b").value) || 0;
+                let c="";
+                for(let i=a;i<=b;i++){
+                    let count=0;
+                    for(let j=1;j<=i/2;j++){
+                        if(i%j==0)
+                            count++;
+                    }
+                    if(count==1)
+                        c=c+i+" ";
+                }
+                document.getElementById("x").innerHTML="Prime numbers from "+a+" to "+b;
+                document.getElementById('ans').innerHTML=c;
+            }
+        </script>
+    </body>
+</html>
+<!-- set default to 0, but should not be shown inside text box -->

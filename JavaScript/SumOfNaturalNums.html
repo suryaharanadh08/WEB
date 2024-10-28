@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum of Natural Numbers</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        form{
+            justify-content: center;
+            display: flex;
+            margin-top: 50px;
+
+        }
+        input{
+            width: 50px;
+            margin-bottom: 15px;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Sum of first n Natural Numbers</h1>
+        <form action="f1">
+            <table>
+                <tr>
+                    <td colspan="2">Enter a Number(n):<input type="number" id="num" style="margin-left: 20px;"> </td>
+                </tr>
+                 <tr>
+                    <td ><input type="button" onclick="sumNaturalNum()" value="Find"></td>
+                    <td ><input type="text" id="ans" style="margin-left: 90px;" ></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+           function sumNaturalNum(){
+                let num = document.getElementById("num").value;
+                let sum=0;
+                for(let i=1;i<=num;i++){
+                    sum=sum+i;
+                } 
+                 document.getElementById("ans").value=sum;
+           }
+        </script>
+    </body>
+</html>

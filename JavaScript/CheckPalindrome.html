@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Check Palindrome</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        form{
+            justify-content: center;
+            display: flex;
+            margin-top: 50px;
+        }
+        input{
+            margin-bottom: 15px;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Check a String Palindrome or not</h1>
+       <div>
+        <form action="f1">
+            <table>
+                <tr>
+                    <td colspan="2">Enter a String:<input type="text" id="str" style="margin-left: 30px; width: 100px;"> </td>
+                </tr>
+                 <tr>
+                    <td colspan="2" align="center" ><input type="button" onclick="checkpalindrome()" value="check"></td>
+                </tr>
+                <tr><td colspan="2" align="center" id="ans"></td></tr>
+            </table>
+        </form>
+       </div>
+        <script>
+           function checkpalindrome(){
+            let str =document.getElementById("str").value;
+            let temp="";
+            let i=0;
+            while(str[i]!=null){
+            temp=str[i]+temp;
+            i++;
+           }
+            if(str==temp)
+                 document.getElementById("ans").innerHTML="It is a Palindrome";
+            else
+                document.getElementById("ans").innerHTML="Not a Palindrome";
+           }
+        </script>
+    </body>
+</html>
