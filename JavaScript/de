@@ -1,0 +1,92 @@
+/* General Styling for the Page */
+body {
+    background-color: rgb(217, 233, 247);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #3b5998;
+    margin-top: 20px;
+}
+
+/* Styling for the Container Div */
+div {
+    font-size: medium;
+    padding: 3%;
+    padding-left: 4%;
+    background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.95em;
+}
+
+/* Input Fields Styling */
+input {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus effect for input fields */
+input:focus {
+    border-color: #3b5998;
+    outline: none;
+}
+
+/* Error Message Styling */
+.error {
+    color: red;
+    font-size: small;
+    display: none;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    margin-top: 10px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #2e4d7a;
+}

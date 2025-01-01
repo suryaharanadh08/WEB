@@ -9,22 +9,42 @@
                 text-align: center;
                 margin-bottom: 40px;
             }
-            /* div{
+            div{
                 text-align: center;
-                align-content: center;
-                padding: 30px;
-                background-color: rgb(239, 239, 253);
-                width: 200px;
-                
-            } */
-             td{
-                padding: 20px;
-                align-items: center;
-             }
+                justify-content: center;              
+            }
              form{
                 text-align: center;
+                justify-content: center;
+             }
+             table{
+                justify-content: center;
+                margin-left: 510px;
              }
         </style>
+        
+    </head>
+    <body>
+        <h1>Calculator Application</h1>
+        <div class="div">
+            <form>
+               
+                    Enter value in A :
+                    <input type="number" id="a" name="a" style="width: 50px; margin-bottom: 10px;" ><br>
+                    Enter value in B :
+                    <input type="number" id="b" name="b" style="width: 50px; margin-bottom: 20px;" >
+                    <table >
+                        <tr>
+                            <td><input type="button" onclick="calculate(value)" name="add" value="Add"></td>
+                            <td><input type="button" onclick="calculate(value)" name="Substract" value="Substract"></td>
+                            <td><input type="button" onclick="calculate(value)" name="Multiply" value="Multiply"></td>
+                            <td><input type="button" onclick="calculate(value)" name="Divide" value="Divide"></td>
+                        </tr>
+                    </table>
+                    <p id="ans"></p>
+    
+            </form>
+        </div>
         <script>
             function calculate(operation){
                 a=parseFloat(document.getElementById("a").value);
@@ -45,28 +65,8 @@
                         break;
                 }
                 console.log(result);
+                document.getElementById("ans").innerHTML="Ans is : "+result;
         }
         </script>
-    </head>
-    <body>
-        <h1>Calculator Application</h1>
-        <div class="div">
-            <form>
-                <pre>
-                    Enter value in A :
-                    <input type="number" id="a" name="a" >
-                    Enter value in B :
-                    <input type="number" id="b" name="b" >
-                    <table >
-                        <tr>
-                            <td><input type="button" onclick="calculate(value)" name="add" value="Add"></td>
-                            <td><input type="button" onclick="calculate(value)" name="Substract" value="Substract"></td>
-                            <td><input type="button" onclick="calculate(value)" name="Multiply" value="Multiply"></td>
-                            <td><input type="button" onclick="calculate(value)" name="Divide" value="Divide"></td>
-                        </tr>
-                    </table>
-                </pre>
-            </form>
-        </div>
     </body>
 </html>

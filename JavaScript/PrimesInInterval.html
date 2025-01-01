@@ -45,8 +45,8 @@
         <div id="ans" ></div>
         <script>
             function find(){
-                let a = parseFloat(document.getElementById("a").value) || 0;
-                let b = parseFloat(document.getElementById("b").value) || 0;
+                let a = document.getElementById("a").value || 0;
+                let b = document.getElementById("b").value || 0;
                 let c="";
                 for(let i=a;i<=b;i++){
                     let count=0;
@@ -63,4 +63,3 @@
         </script>
     </body>
 </html>
-<!-- set default to 0, but should not be shown inside text box -->

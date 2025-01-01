@@ -1,0 +1,20 @@
+<form>
+Enter user name: <input type="text" id="username">
+<span style="display: none;padding-left: 150px; color: red  ;" id="err"></span>
+</form>
+<script>
+var username=document.getElementById("username");
+var err=document.getElementById("err");
+username.addEventListener("blur",()=>{
+    if(username.value.trim()===''){
+        err.style.display='block';
+        err.innerHTML="Required";
+        username.style.borderColor="red";
+    }
+    else{
+        err.style.display='none';
+        username.style.borderColor="green";
+        
+    }
+})
+</script>

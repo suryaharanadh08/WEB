@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 2em;
+            color: #021301;
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-top-style: dotted;
+            border-bottom-style: dashed;
+            font-weight: 300;
+            background :linear-gradient(to left,skyblue,white)
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(251, 252, 250, 0.973);
+            padding: 1.5%;       
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            width: 700px;
+            margin-left: 280px;
+            
+        }
+        table {
+            margin-bottom: 3px;
+        }
+        div {
+            font-size: medium;
+            padding: 3%;
+            padding-left: 10%;
+            background-image: url(formbg.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 20px auto;
+            margin-bottom: 40px;
+            width: 80%;
+            max-width: 410px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgb(252, 250, 250);
+        }
+        body {
+           background :linear-gradient(to left,skyblue,rgb(233, 19, 19));
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        input:focus {
+            border-color: #3b5998;
+            outline: none;
+        }
+        .error {
+            color: red;
+            font-size:small;
+            display: none; 
+        }
+        button {
+            background-color: #3b5998;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95em;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #2e4d7a;
+        }
+        hr {
+        border: none;
+        height: 2px;
+        background: linear-gradient(to right, #46484b, #8b9dc3);
+        margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Registration Form</h1>
+    </header>
+    <form  id="f1" action="success.html" onsubmit="return validateForm()" autocomplete="on" method="post" >
+        <div>
+            <table id="t1">
+                <tr>
+                    <td>First Name :</td>
+                    <td> <input type="text" id="fname" style="width: 100px; margin-left: 30px;"></td>                    
+                    <td><span id="errfn" class="error" style="margin-left: 0px;"></span></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                     <td>Last Name :</td>
+                     <td><input type="text" id="lname" style="width: 100px; margin-left: 30px;"></td>
+                     <td><span id="errln" class="error"></span> </td>
+                    
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Date Of Birth :</td>
+                    <td><input type="date" id="dob" name="dob" style="margin-left: 10px;"></td>
+                    <td><span id="errdob" class="error"></span> </td>
+
+                </tr>
+                <tr>
+                    <td>Father Name :</td>
+                    <td><input type="text" id="fathername" placeholder="Full Name" style="width: 100px; margin-left: 10px;"></td>
+                    <td><span id="errfathername" class="error" style="margin-left: 0px;"></span> </td>
+                </tr>
+                <tr>
+                    <td>Mother Name :</td>
+                    <td><input type="text" id="mothername" placeholder="Full Name" style="width: 100px; margin-left: 10px;"></td>
+                    <td><span id="errmothername" class="error" style="margin-left: 0px;"></span> </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Engineering Branch :</td>
+                    <td>
+                        <select style="width:150px;" id="branch" name="branch" style="margin-left: 15px;">
+                            <option value="" disabled selected>Select your branch</option>
+                            <option value="CSE">Computer Science Engineering</option>
+                            <option value="ECE">Electronics and Communication Engineering</option>
+                            <option value="ME">Mechanical Engineering</option>
+                            <option value="CE">Civil Engineering</option>
+                        </select>
+                    </td>
+                    <td><span id="errbranch" class="error"></span></td>
+                </tr>
+            </table>
+            <table style="margin-top: 8px;">
+                <tr>
+                    <td>Gender :</td>
+                    <td><input type="radio" id="male" name="gender" value="male"> Male</td>
+                    <td><input type="radio" id="female" name="gender" value="female"> Female</td>
+                    <td><span id="errgender" class="error"></span></td>
+                </tr>
+            </table>
+            <table style="margin-top: 0px;">
+                <tr>
+                    <td>Phone Number :</td>
+                    <td><input type="number" id="phone" style="width: 100px; margin-left: 10px;"></td>
+                    <td><span id="errphone" class="error"></span></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td colspan="3">Languages Known :</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="language"> Telugu</td>
+                    <td><input type="checkbox" name="language" style="margin-left: 10px;"> Hindi</td>
+                    <td><input type="checkbox" name="language" style="margin-right: 10px;"> English</td>
+                    <td><span id="errlanguage" class="error"></span></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Email Id :</td>
+                    <td><input type="email" id="email" placeholder="example@gmail.com" style="margin-left:10px; width:130px;"></td>
+                    <td><span id="erremail" class="error"></span></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Hobbies :</td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea name="hobbies" id="hobbies" rows="5" cols="25" maxlength="300" minlength="150" placeholder="Describe your hobbies"></textarea>
+                    </td>
+                    <td><span id="errhobbies" class="error"></span></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Create Password :</td>
+                    <td><input type="password" id="crp" style="margin-left: 15px; width: 80px;"></td>
+                    <td><span id="errcrp" class="error"></span></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Confirm Password :</td>
+                    <td><input type="password" id="cop" style="margin-left: 5px; width: 80px;"></td>
+                    <td><span id="errcop" class="error"></span></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td align="center"><input type="submit" value="Submit" style="margin-top: 10px; margin-left: 75px;background-color: rgb(59, 209, 189); color: rgb(23, 27, 10);"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <script>
+      var isValidFName = false, isValidLName = false, isValidDOB = false,
+            isValidFatherName = false, isValidMotherName = false, isValidBranch = false,
+            isValidPhone = false, isValidEmail = false, isValidHobbies = false;
+      var isPassword = false, isValidateConfirmPassword = false; isgenderValid=false;
+      var fname = document.getElementById("fname");
+      fname.addEventListener('blur', () => {
+            const hasinvalidcharacters = /[^a-zA-Z]/.test(fname.value.trim());
+            const hasNumbers = /\d/.test(fname.value.trim());
+            const trimmedValue = fname.value.trim();
+            if (trimmedValue === '') {
+                errfn.style.display = 'block';
+                errfn.innerHTML = " Enter your first name";
+                fname.style.borderColor = "red";
+                isValidFName=false;
+            } else if (trimmedValue.length < 3 || trimmedValue.length > 10) {
+                errfn.style.fontSize = 'small';
+                errfn.style.display = 'block';
+                errfn.innerHTML = "Requires 3-10 characters";
+                fname.style.borderColor = "red";
+                isValidFName=false;
+            } else if (hasinvalidcharacters) {
+                errfn.style.fontSize = 'small';
+                errfn.style.display = 'block';
+                errfn.innerHTML = "Allows characters only";
+                fname.style.borderColor = "red";
+                isValidFName=false;
+            } else if (hasNumbers) {
+                errfn.style.fontSize = 'small';
+                errfn.style.display = 'block';
+                errfn.innerHTML = "Allows characters only";
+                fname.style.borderColor = "red";
+                isValidFName=false;
+            } else {
+                errfn.style.display = 'none';
+                fname.style.borderColor = '';
+                isValidFName = true;
+
+            }
+        });
+
+        lname.addEventListener('blur', () => {
+            const hasinvalidcharacters = /[^a-zA-Z]/.test(lname.value.trim());
+            const hasNumbers = /\d/.test(lname.value.trim());
+            const trimmedValue = lname.value.trim();
+            if (trimmedValue === '') {
+                errln.style.display = 'block';
+                errln.innerHTML = "Enter your Last name";
+                lname.style.borderColor = "red";
+                isValidLName=false;
+            } else if (trimmedValue.length < 3 || trimmedValue.length > 10) {
+                errln.style.fontSize = 'small';
+                errln.style.display = 'block';
+                errln.innerHTML = "Atleast 3-10 characters";
+                lname.style.borderColor = "red";
+                isValidLName=false;
+            } else if (hasinvalidcharacters) {
+                errln.style.fontSize = 'small';
+                errln.style.display = 'block';
+                errln.innerHTML = "Allows characters only";
+                lname.style.borderColor = "red";
+                isValidLName=false;
+            } else if (hasNumbers) {
+                errln.style.fontSize = 'small';
+                errln.style.display = 'block';
+                errln.innerHTML = "Allows characters only";
+                lname.style.borderColor = "red";
+                isValidLName=false;
+            } else {
+                errfn.style.display = 'none';
+                lname.style.borderColor = '';
+                isValidLName=true;
+            }
+        });
+
+        var dob = document.getElementById('dob');
+        dob.addEventListener('blur',()=>{
+            if(dob.value===''){
+                errdob.style.display='block';
+                errdob.innerHTML="Required";
+                isValidDOB=false;
+            }
+            else{
+                errdob.style.display='none';
+                isValidDOB=true;
+            }
+        })
+        fathername.addEventListener('blur', () => {
+            const hasinvalidcharacters = /[^a-zA-Z]/.test(fathername.value.trim());
+            const hasNumbers = /\d/.test(fathername.value.trim());
+            const trimmedValue = fathername.value.trim();
+            if (trimmedValue === '') {
+                errfathername.style.display = 'block';
+                errfathername.innerHTML = "Enter your Father name";
+                fathername.style.borderColor = "red";
+                isValidFatherName=false;
+            } else if (trimmedValue.length < 3 || trimmedValue.length > 10) {
+                errfathername.style.fontSize = 'small';
+                errfathername.style.display = 'block';
+                errfathername.innerHTML = "Atleast 3-10 characters";
+                fathername.style.borderColor = "red";
+                isValidFatherName=false;
+            } else if (hasinvalidcharacters) {
+                errfathername.style.fontSize = 'small';
+                errfathername.style.display = 'block';
+                errfathername.innerHTML = "Allows characters only";
+                fathername.style.borderColor = "red";
+                isValidFatherName=false;
+            } else if (hasNumbers) {
+                errfathername.style.fontSize = 'small';
+                errfathername.style.display = 'block';
+                errfathername.innerHTML = "Allows characters only";
+                fathername.style.borderColor = "red";
+                isValidFatherName=false;
+            } else {
+                errfathername.style.display = 'none';
+                fathername.style.borderColor = '';
+                isValidFatherName=true;
+            }
+        });
+
+        mothername.addEventListener('blur', () => {
+            const hasinvalidcharacters = /[^a-zA-Z]/.test(mothername.value.trim());
+            const hasNumbers = /\d/.test(mothername.value.trim());
+            const trimmedValue = mothername.value.trim();
+            if (trimmedValue === '') {
+                errmothername.style.display = 'block';
+                errmothername.innerHTML = "Enter your Mother name";
+                mothername.style.borderColor = "red";
+                isValidMotherName=false;
+            } else if (trimmedValue.length < 3 || trimmedValue.length > 10) {
+                errmothername.style.fontSize = 'small';
+                errmothername.style.display = 'block';
+                errmothername.innerHTML = "Requires 3-10 characters";
+                mothername.style.borderColor = "red";
+                isValidMotherName=false;
+            } else if (hasinvalidcharacters) {
+                errmothername.style.fontSize = 'small';
+                errmothername.style.display = 'block';
+                errmothername.innerHTML = "Allows characters only";
+                mothername.style.borderColor = "red";
+                isValidMotherName=false;
+            } else if (hasNumbers) {
+                errmothername.style.fontSize = 'small';
+                errmothername.style.display = 'block';
+                errmothername.innerHTML = "Allows characters only";
+                mothername.style.borderColor = "red";
+                isValidMotherName=false;
+            } else {
+                errmothername.style.display = 'none';
+                mothername.style.borderColor = '';
+                isValidMotherName=true;
+            }
+        });
+        var branch = document.getElementById('branch');
+        branch.addEventListener('blur',()=>{
+            if(branch.value===''){
+                errbranch.style.display='block';
+                errbranch.innerHTML='Required';
+                branch.style.borderColor='red';
+                isValidBranch=false;
+            }
+            else{
+                errbranch.style.display='none';
+                branch.style.borderColor='';
+                isValidBranch=true;
+            }
+        });
+        var phone = document.getElementById('phone');
+        phone.addEventListener('blur',()=>{
+            if(phone.value===''){
+                errphone.style.display='block';
+                errphone.style.fontSize='small';
+                errphone.innerHTML='Required';
+                phone.style.borderColor='red';
+                isValidPhone=false;
+            }
+            else if(phone.value.length<10 || phone.value.length>10){
+                errphone.style.display='block';
+                errphone.style.fontSize='small';
+                errphone.innerHTML='should only 10 characters';
+                phone.style.borderColor='red';
+                isValidPhone=false;
+            }
+            else{
+                errphone.style.display='none';
+                phone.style.borderColor='';
+                isValidPhone=true;
+            }
+        });
+        
+        var email = document.getElementById('email');
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        email.addEventListener('blur',()=>{
+            const isvalidemail = emailPattern.test(email.value.trim()); 
+            if(email.value===''){
+                erremail.style.display='block';
+                erremail.style.fontSize='small';
+                erremail.innerHTML='Required';
+                email.style.borderColor='red';
+                isValidEmail=false;
+
+            }
+            else if(!(isvalidemail)){
+                erremail.style.display='block';
+                erremail.style.fontSize='small';
+                erremail.innerHTML='check your email address';
+                email.style.borderColor='red';
+                isValidEmail=false;
+                console.log(isValidEmail);
+            }
+            else{
+                erremail.style.display='none';
+                email.style.borderColor='';
+                isValidEmail=true;
+                console.log(isValidEmail);
+            }
+        });
+        var hobbies = document.getElementById('hobbies');
+        hobbies.addEventListener('blur',()=>{
+            const len= hobbies.value.trim().length;
+            if(hobbies.value===''){
+                errhobbies.style.display='block';
+                errhobbies.style.fontSize='small';
+                errhobbies.innerHTML='Required';
+                hobbies.style.borderColor='red';
+                isValidHobbies=false;
+            }
+            else if(len<=150 || len>=300){
+                errhobbies.style.display='block';
+                errhobbies.style.fontSize='small';
+                errhobbies.innerHTML='characters between 150-300';
+                hobbies.style.borderColor='red';
+                isValidHobbies=false;
+            }
+            else{
+                errhobbies.style.display='none';
+                hobbies.style.borderColor='';
+                isValidHobbies=true;
+            }
+        });
+        var crp = document.getElementById('crp');
+        crp.addEventListener('blur',()=>{
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            const isValidPassword = passwordPattern.test(crp.value);
+
+            if(crp.value===''){
+                errcrp.style.display='block';
+                errcrp.style.fontSize='small';
+                errcrp.innerHTML='Required';
+                crp.style.borderColor='red';
+                isPassword=false;
+            }
+            else if(!(isValidPassword)){
+                errcrp.style.display='block';
+                errcrp.style.fontSize='xx-small';
+                errcrp.innerHTML='must have 1Upper,1Lower,1Symbol,1num ';
+                crp.style.borderColor='red';
+                isPassword=false;
+                console.log(isPassword);
+            }
+            else{
+                errcrp.style.display='none';
+                crp.style.borderColor='';
+                isPassword=true;
+                console.log(isPassword);
+            }
+        });
+        var cop = document.getElementById('cop');
+        cop.addEventListener('blur',()=>{
+            if(cop.value===''){
+                errcop.style.display='block';
+                errcop.style.fontSize='small';
+                errcop.innerHTML='Required';
+                cop.style.borderColor='red';
+                isValidConfirmPassword=false;
+            }
+            else if(!(crp.value===cop.value)){
+                errcop.style.display='block';
+                errcop.style.fontSize='small';
+                errcop.innerHTML='passwords not same';
+                cop.style.borderColor='red';
+                isValidConfirmPassword=false;
+            }
+            else{
+                errcop.style.display='none';
+                cop.style.borderColor='';
+                isValidConfirmPassword=true;
+                console.log(isValidConfirmPassword);
+            }
+        });
+        function validateForm() {
+            //for gender
+            let isgenderValid = false;
+            const gender = document.querySelector('input[name="gender"]:checked'); 
+            const errgender = document.getElementById('errgender'); 
+
+            if (!gender) {
+                errgender.style.display = 'block'; 
+                errgender.style.fontSize = 'small'; 
+                errgender.innerHTML = 'Required'; 
+                isgenderValid = false; 
+            } else {
+                errgender.style.display = 'none';
+                isgenderValid = true; 
+            }
+            //for language
+            let islanguage = false;
+            const language = document.querySelector('input[name="language"]:checked');
+            const errlanguage = document.getElementById('errlanguage');
+            if(!language){
+                errlanguage.style.display = 'block'; 
+                errlanguage.style.fontSize = 'small'; 
+                errlanguage.innerHTML = 'Required'; 
+                islanguage = false; 
+            }
+            else{
+                errlanguage.style.display = 'none';
+                islanguage = true; 
+            }
+
+            if (isValidFName && isValidLName && isValidDOB && isValidFatherName &&
+                isValidMotherName && isValidBranch && isValidPhone && isValidEmail &&
+                isValidHobbies && isPassword && isValidConfirmPassword && isgenderValid && islanguage) {
+
+                const fnameValue = document.getElementById('fname').value;
+                const lnameValue = document.getElementById('lname').value;
+                const dobValue = document.getElementById('dob').value;
+                const fatherNameValue = document.getElementById('fathername').value;
+                const motherNameValue = document.getElementById('mothername').value;
+                const branchValue = document.getElementById('branch').value;
+                const phoneValue = document.getElementById('phone').value;
+                const emailValue = document.getElementById('email').value;
+                const hobbiesValue = document.getElementById('hobbies').value;
+                const selectedGender = gender.value;
+                const selectedLanguage = language.value;
+                const url = `success.html?fname=${encodeURIComponent(fnameValue)}&lname=${encodeURIComponent(lnameValue)}&dob=${encodeURIComponent(dobValue)}&fathername=${encodeURIComponent(fatherNameValue)}&mothername=${encodeURIComponent(motherNameValue)}&branch=${encodeURIComponent(branchValue)}&phone=${encodeURIComponent(phoneValue)}&email=${encodeURIComponent(emailValue)}&hobbies=${encodeURIComponent(hobbiesValue)}&gender=${encodeURIComponent(selectedGender)}&language=${encodeURIComponent(selectedLanguage)}`;
+
+                window.location.href = url;
+
+                return false; 
+            } else {
+                alert("Please fill in all required fields correctly.");
+                return false; 
+            }
+        }
+
+
+    </script>
+</body>
+</html>

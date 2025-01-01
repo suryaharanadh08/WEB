@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+<style>
+    h1{
+        text-align: center;
+    }
+    p{
+        justify-content: center;
+        display: flex;
+    }  
+    textarea{
+        margin-left: 550px;
+    }
+    
+</style>
+</head>
+<body>
+    <h1>Registration Successful!</h1>
+    <div id="output"></div>
+
+    <script>
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const regex = /([^&=]+)=([^&]*)/g;
+            let m;
+            while (m = regex.exec(queryString)) {
+                params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            return params;
+        }
+        
+
+        const params = getQueryParams();
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `
+            <p><strong>First Name:</strong> ${params.fname}</p>
+            <p><strong>Last Name:</strong> ${params.lname}</p>
+            <p><strong>Date of Birth:</strong> ${params.dob}</p>
+            <p><strong>Gender:</strong> ${params.gender}</p>
+            <p><strong>Father's Name:</strong> ${params.fathername}</p>
+            <p><strong>Mother's Name:</strong> ${params.mothername}</p>
+            <p><strong>Branch:</strong> ${params.branch}</p>
+            <p><strong>Phone:</strong> ${params.phone}</p>
+            <p><strong>Email:</strong> ${params.email}</p>
+           <p><strong>Hobbies</strong></p>
+            <textarea rows='5'cols='30' >${params.hobbies}</textarea>
+           
+        `; // <p><strong>Language:</strong> ${params.language}</p>
+    </script>
+</body>
+</html>
